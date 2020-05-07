@@ -4,7 +4,12 @@
 
     <v-content>
         <v-container>
-            <h1>Список книг библиотеки</h1>
+            <v-row>
+                <h1>Список книг библиотеки</h1>
+                <v-btn @click="loadBooks()" text small class="mt-3 ml-5">
+                    <v-icon>mdi-refresh</v-icon>
+                </v-btn>
+            </v-row>
 
             <v-divider class="mt-5"></v-divider>
             <v-row justify="center" class="my-2 font-weight-bold text-left">
@@ -124,7 +129,7 @@ export default {
                     "Authorization": 'Bearer ' + this.$store.getters.getToken,
                 }
             })
-            this.loadBooks(); 
+            this.loadBooks();
             this.addingTitle = '';   
             this.addingAuthor = '';   
         },
