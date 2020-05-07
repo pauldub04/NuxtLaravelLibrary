@@ -26,7 +26,7 @@
                 </v-col>
                 <v-col cols="4" class="text-center">{{book.title}}</v-col>
                 <v-col cols="4" class="text-center">{{book.author}}</v-col>
-                <v-col cols="3" color="primary" outlined class="text-center">
+                <v-col cols="3" class="text-center" v-bind:class="{available: book.availability}">
                     {{isAvailable(book)}}
                 </v-col>
             </v-row>
@@ -99,5 +99,8 @@ export default {
 .notAvailable{
     color: grey;
     text-decoration: line-through;
+}
+.available {
+    color: #1976D2;
 }
 </style>

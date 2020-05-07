@@ -80,7 +80,6 @@ export default {
                 password: this.password,
                 device_name: this.device_name,
             }).then(response => {
-                //this.$store.getters.getToken
                 console.log("response", response);
                 this.$store.dispatch('setToken', response.data);
                 if (this.$store.getters.getRole == "admin")

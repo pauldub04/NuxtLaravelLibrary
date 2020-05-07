@@ -30,7 +30,8 @@ class BookController extends Controller
     }
 
     public function changeAvailability($id) {
-        $book = Book::find($id);
+        //$book = Book::find($id);
+        $book =Book::where('id', $id)->first();
         $book->availability = !$book->availability;
         $book->save();
         return back();

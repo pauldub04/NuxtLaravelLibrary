@@ -51,12 +51,11 @@ export default {
     methods: {
         logOut() {
             this.$store.dispatch('logOut');
-            this.$router.push('/')
+            this.$router.push('/');
         },
         draw() {
-            console.log(this.list);
             this.drawer = !this.drawer;
         },
-    }
+    },
 }
 </script>

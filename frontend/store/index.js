@@ -19,6 +19,7 @@ export const mutations = {
         state.isAuth = false;
         state.apiToken = '';
         state.role = '';
+        state.email = '';
     },
 }
 
